@@ -1,0 +1,25 @@
+{
+  "Request": {
+    "Path": {
+      "Matchers": [
+        {
+          "Name": "WildcardMatcher",
+          "Pattern": "/api/exact"
+        }
+      ]
+    },
+    "Methods": [
+      "POST"
+    ]
+  },
+  "Response": {
+    "StatusCode": 200,
+    "BodyAsJson": {
+      "rate": "{{Random Type=\"Integer\" Min=150 Max=300}}"
+    },
+    "Headers": {
+      "Content-Type": "application/json"
+    },
+    "UseTransformer": true
+  }
+}
